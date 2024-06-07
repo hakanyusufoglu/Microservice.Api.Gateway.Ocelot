@@ -1,0 +1,49 @@
+{
+  "Routes": [
+    {
+      //Yönlendirme yapılacak mikroservis'in adresi
+      "DownstreamPathTemplate": "/", //tüm endpointleri yapmak istersek {everyting} dememiz gerekir.
+      //Yönlendirme yapılacak mikroservis'in protokolü
+      "DownstreamScheme": "https",
+      //Yönlendirme yapılacak mikroservis'in portu
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7149
+        }
+      ],
+      //Yönlendirme yapılacak mikroservis'in path'i, bu path ile gateway'e gelen istekler downstreampathtemplateteki route yönlendirilecektir
+      "UpstreamPathTemplate": "/api1",
+      //Yönlendirme yapılacak mikroservis'in http methodları
+      "UpstreamHttpMethod": [ "GET", "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/", //tüm endpointleri yapmak istersek {everyting} dememiz gerekir.
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7028
+        }
+      ],
+      "UpstreamPathTemplate": "/api2",
+      "UpstreamHttpMethod": [ "GET", "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7061
+        }
+      ],
+      "UpstreamPathTemplate": "/api3",
+      "UpstreamHttpMethod": [ "GET", "POST" ]
+    }
+  ],
+  //ApiGateway'in adresi
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:7107"
+  }
+}

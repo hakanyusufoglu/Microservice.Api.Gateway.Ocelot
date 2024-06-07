@@ -4,18 +4,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.11.34909.67
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{915E6F42-B352-4857-B12B-2D511DDED49B}"
+	ProjectSection(SolutionItems) = preProject
+		resource_notes.txt = resource_notes.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FE315D81-5894-4B83-B091-906DE17DC23A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{3638F110-7F35-46FE-B22A-E3641223C884}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.Api1", "Microservices.Api1\Microservices.Api1.csproj", "{701323A4-B4C6-47B5-8B8D-FFCE49B6F704}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.Api1", "Microservices.Api1\Microservices.Api1.csproj", "{701323A4-B4C6-47B5-8B8D-FFCE49B6F704}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.Api2", "Microservices.Api2\Microservices.Api2.csproj", "{F4B0DF8F-77A8-48A4-8270-AD7CA6850B6A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.Api2", "Microservices.Api2\Microservices.Api2.csproj", "{F4B0DF8F-77A8-48A4-8270-AD7CA6850B6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.Api3", "Microservices.Api3\Microservices.Api3.csproj", "{3ACC2C84-4B86-4B41-976C-8ADDD9DBCF20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.Api3", "Microservices.Api3\Microservices.Api3.csproj", "{3ACC2C84-4B86-4B41-976C-8ADDD9DBCF20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.Api.Gateway", "Microservices.Api.Gateway\Microservices.Api.Gateway.csproj", "{44F62BE3-6417-4C87-A3C9-9DFAE143100A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.Api.Gateway", "Microservices.Api.Gateway\Microservices.Api.Gateway.csproj", "{44F62BE3-6417-4C87-A3C9-9DFAE143100A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
