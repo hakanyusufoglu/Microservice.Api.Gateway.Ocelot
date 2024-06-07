@@ -15,7 +15,12 @@
       //Yönlendirme yapılacak mikroservis'in path'i, bu path ile gateway'e gelen istekler downstreampathtemplateteki route yönlendirilecektir
       "UpstreamPathTemplate": "/api1",
       //Yönlendirme yapılacak mikroservis'in http methodları
-      "UpstreamHttpMethod": [ "GET", "POST" ]
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      //Authentication işlemleri
+      "AuthenticationOptions": {
+        "AllowedScopes": [],
+        "AuthenticationProviderKey": "Bearer"
+      }
     },
     {
       "DownstreamPathTemplate": "/", //tüm endpointleri yapmak istersek {everyting} dememiz gerekir.
