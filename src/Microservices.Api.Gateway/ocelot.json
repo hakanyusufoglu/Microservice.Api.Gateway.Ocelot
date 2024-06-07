@@ -20,6 +20,11 @@
       "AuthenticationOptions": {
         "AllowedScopes": [],
         "AuthenticationProviderKey": "Bearer"
+      },
+      //İstek buraya yönelirken iki şartımız var birincisi jwt ikincisi ise rolün admin olması gerektiğidir. 
+      //Bu kuralı koyduk çünkü client admin değilse gateway boşuna api 1 servisine isteği yönlendirmesin. Tüm sorumluluğu gateway üstlenir. Böylece servis 1 isteği almaz
+      "RouteClaimsRequirement": {
+        "Role": "Admin"
       }
     },
     {

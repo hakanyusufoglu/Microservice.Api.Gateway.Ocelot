@@ -3,7 +3,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddAuthorization();
+builder.Services.AddAuthorization(options=>options.AddPolicy("AdminPolicy",policy=>policy.RequireClaim("Role","Admin")));
 //jwt 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, options =>
@@ -29,6 +29,7 @@ var app = builder.Build();
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.MapGet("/", () => "Hello World! - Api 1");
+app.MapGet("/", () => "Hello World! - Api 1")
+    .RequireAuthorization("AdminPolicy");
 
 app.Run();

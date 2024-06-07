@@ -3,3 +3,6 @@ API 2 : https://localhost:7028
 API 3 : https://localhost:7061
 
 API_Gateway : https://localhost:7107
+
+Note: Jwt token lifetime should not be this long. It should be short according to the scenario of the project and security.
+Example: jwt key: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ3d3cubXlhcGkuY29tIiwiaWF0IjoxNzE3NzQyNDc2LCJleHAiOjM2NDI3MzQ0NzYsImF1ZCI6Ind3dy5teWFwaS5jb20iLCJzdWIiOiJqcm9ja2V0QGV4YW1wbGUuY29tIiwiUm9sZSI6IkFkbWluIn0.drE4t0c_vsfxPKysX8-2b2NFtQwoQOmnNAziEK1cGuo
