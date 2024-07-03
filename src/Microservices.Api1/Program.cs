@@ -29,7 +29,10 @@ var app = builder.Build();
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.MapGet("/", () => "Hello World! - Api 1")
-    .RequireAuthorization("AdminPolicy");
+//LoadBalancer denemek için yorum satýrýna alýndý.
+//app.MapGet("/", () => "Hello World! - Api 1 " + args[0])
+//    .RequireAuthorization("AdminPolicy");
+
+app.MapGet("/", () => "Hello World! - Api 1 " + args[0]);
 
 app.Run();

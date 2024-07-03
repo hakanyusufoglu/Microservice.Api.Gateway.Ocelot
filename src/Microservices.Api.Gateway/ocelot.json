@@ -10,21 +10,33 @@
         {
           "Host": "localhost",
           "Port": 7149
+        },
+        {
+          "Host": "localhost",
+          "Port": 7150
+        },
+        {
+          "Host": "localhost",
+          "Port": 7151
         }
       ],
       //Yönlendirme yapılacak mikroservis'in path'i, bu path ile gateway'e gelen istekler downstreampathtemplateteki route yönlendirilecektir
       "UpstreamPathTemplate": "/api1",
       //Yönlendirme yapılacak mikroservis'in http methodları
       "UpstreamHttpMethod": [ "GET", "POST" ],
-      //Authentication işlemleri
-      "AuthenticationOptions": {
-        "AllowedScopes": [],
-        "AuthenticationProviderKey": "Bearer"
-      },
+      //Authentication işlemleri 
+      //LoadBalancer test etmek için yorum satırına alındı. (Eğitim amaçlı)
+      //"AuthenticationOptions": {
+      //  "AllowedScopes": [],
+      //  "AuthenticationProviderKey": "Bearer"
+      //},
       //İstek buraya yönelirken iki şartımız var birincisi jwt ikincisi ise rolün admin olması gerektiğidir. 
       //Bu kuralı koyduk çünkü client admin değilse gateway boşuna api 1 servisine isteği yönlendirmesin. Tüm sorumluluğu gateway üstlenir. Böylece servis 1 isteği almaz
-      "RouteClaimsRequirement": {
-        "Role": "Admin"
+      //"RouteClaimsRequirement": {
+      //  "Role": "Admin"
+      //},
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
       }
     },
     {
